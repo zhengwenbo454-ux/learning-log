@@ -25,4 +25,7 @@ class Student(Person):
     def show_info(self):
         print(f"Name: {self.name}, Age: {self.age}, Student ID: {self.student_id}")
 p1 = Student("Bob", 22, "S12345")
-p1.show_info()  # 输出: Name: Bob, Age: 22, Student ID: S12345
+p1.show_info() 
+ # 输出: Name: Bob, Age: 22, Student ID: S12345
+
+ """practice 3"""
