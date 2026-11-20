@@ -28,4 +28,25 @@ p1 = Student("Bob", 22, "S12345")
 p1.show_info() 
  # 输出: Name: Bob, Age: 22, Student ID: S12345
 
- """practice 3"""
+"""practice 3"""
+class Animal:
+    def __init__(self, cry):
+        self.cry = cry
+        print(f"{self.cry}")
+
+class Dog(Animal):
+    def __init__(self,cry):
+        super().__init__(cry)
+        self.cry = "woof"
+        print(f"{self.cry}")
+
+class Cat(Animal):
+    def __init__(self, cry):
+        super().__init__(cry)
+        self.cry = "meow"
+        print(f"{self.cry}")
+
+p1 = Dog("woof")
+p2 = Cat("meow")
+p1.show_info()  # 输出: woof
+p2.show_info()  # 输出: meow
