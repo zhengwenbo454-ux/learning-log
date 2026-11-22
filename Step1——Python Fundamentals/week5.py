@@ -34,8 +34,15 @@ class Bag:
         return NotImplemented
     def __getitem__(self, index):
         return self.items[index]
-        
-b1 = Bag(["a"])
+
+    def __iter__(self):
+        return iter(self.items)
+    def __call__(self):
+        return f"Bag with {len(self.items)} items: {self.items}"
+b1 = Bag(["a", "b", "c"])
+for i in b1:
+    print(i)
+b1()  # 输出: Bag with 3 items: ['a', 'b', 'c']
 b2 = Bag(["b"])
 b3 = b1 + b2
 print(b3[0])
