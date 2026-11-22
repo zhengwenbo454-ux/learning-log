@@ -51,4 +51,30 @@ print(b1 == b2)  # 输出: False
 print(b1 < b2)  # 输出: True
 
 
+class Account:
+    def __init__(self, initial_balance):
+        self._balance = initial_balance
+        self.secret = "my_secret_code"
+
+    @property
+    def balance(self):
+        return self._balance
+
+    @balance.setter
+    def balance(self, value):
+        self._balance = value
+
+
+if __name__ == "__main__":
+    acc = Account(100)
+    print("current balance", acc.balance)
+    acc.balance = 200
+    print(acc.balance)
+
+
+    
+
+
+
+
 
