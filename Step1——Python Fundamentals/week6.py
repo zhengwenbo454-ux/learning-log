@@ -9,3 +9,4 @@ def calc(a, b):
         print("函数执行结束")
 calc(10, 2)
 calc(10, 0)
+calc(4, 0)
